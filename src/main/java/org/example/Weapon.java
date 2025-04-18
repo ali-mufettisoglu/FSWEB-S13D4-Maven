@@ -1,11 +1,16 @@
 package org.example;
 
 public enum Weapon {
-    SWORD;
+    SWORD(20, 2.5);
     private int damage;
     private double attackSpeed;
 
-    public int getDamage(){
+    Weapon(int damage, double attackSpeed) {
+        this.attackSpeed = attackSpeed;
+        this.damage = damage;
+    }
+
+    public int getDamage() {
         return this.damage;
     }
 
